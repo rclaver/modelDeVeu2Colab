@@ -1,0 +1,23 @@
+# Core
+TTS==0.22.0
+
+# NumPy / SciPy (compatibles)
+numpy==1.26.4
+scipy==1.11.4
+
+# Audio
+librosa==0.10.1
+soundfile==0.12.1
+pydub==0.25.1
+
+# Utils
+pandas<2
+matplotlib==3.8.2
+tqdm==4.66.1
+
+# PyTorch (ajusta según tu GPU)
+torch==2.1.2
+torchaudio==2.1.2
+
+# Otros necesarios indirectos
+numba==0.58.1

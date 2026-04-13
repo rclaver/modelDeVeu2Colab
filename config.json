@@ -1,0 +1,59 @@
+{
+  "output_path": "./proces/tts_output",
+  "datasets": [
+    {
+      "name": "custom_ca",
+      "path": "./dades/dataset",
+      "meta_file_train": "metadata.csv",
+      "formatter": "ljspeech",
+      "language": "ca"
+    }
+  ],
+
+  "_#precompute_num_workers": 4,
+  "_#use_noise_augment": false,
+
+  "_#recompute_f0": true,
+  "_#recompute_energy": true,
+
+  "compute_input_seq_cache": true,
+  "compute_f0": true,
+  "compute_energy": true,
+  "f0_cache_path": "./proces/cache/f0",
+  "energy_cache_path": "./proces/cache/energy",
+  "phoneme_cache_path": "./proces/cache/phonemes",
+
+  "model": "fastspeech2",
+
+  "audio": {
+    "sample_rate": 22050,
+    "win_length": 1024,
+    "hop_length": 256,
+    "num_mels": 80
+  },
+
+  "batch_size": 16,
+  "eval_batch_size": 8,
+  "num_loader_workers": 4,
+
+  "_#run_eval": true,
+  "run_eval": false,
+  "test_delay_epochs": 5,
+
+  "_#epochs": 1,
+  "epochs": 1000,
+  "save_step": 5000,
+
+  "id_optimizer": "fix",
+  "optimizer": "Adam",
+  "optimizer_params": {},
+  "lr": 0.001,
+  "lr_scheduler": "NoamLR",
+
+  "use_phonemes": true,
+  "phoneme_language": "ca",
+
+  "text_cleaner": "phoneme_cleaners",
+
+  "mixed_precision": true
+}

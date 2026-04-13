@@ -1,0 +1,14 @@
+.spyproject
+dades
+preparacio
+run-April-11-2026_03+22PM-0000000
+*.gz
+*.txt
+*.sh
+*.npy
+config.json
+procés
+.spyproject/*
+dades/*
+preparacio/*
+run-April-11-2026_03+22PM-0000000/*
