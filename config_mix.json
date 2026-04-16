@@ -1,0 +1,53 @@
+{
+  "output_path": "./proces/tts_output",
+
+  "datasets": [
+    {
+      "name": "custom_ca",
+      "path": "./dataset",
+      "meta_file_train": "metadata.csv",
+      "formatter": "ljspeech",
+      "language": "ca"
+    }
+  ],
+
+  "compute_input_seq_cache": true,
+  "phoneme_cache_path": "./proces/cache/phonemes",
+  "compute_f0": false,
+  "#_compute_energy": false,
+
+  "use_speaker_embedding": false,
+  "use_d_vector_file": false,
+
+  "model": "vits",
+
+  "audio": {
+    "sample_rate": 22050,
+    "win_length": 1024,
+    "hop_length": 256,
+    "num_mels": 80
+  },
+
+  "batch_size": 16,
+  "eval_batch_size": 8,
+  "num_loader_workers": 2,
+
+  "run_eval": false,
+
+  "epochs": 1000,
+  "save_step": 500,
+  "save_n_checkpoints": 5,
+  "save_checkpoints": true,
+
+  "optimizer": "Adam",
+  "optimizer_params": {},
+  "lr": 0.001,
+  "lr_scheduler": "NoamLR",
+  "lr_scheduler_params": {},
+
+  "use_phonemes": true,
+  "phoneme_language": "ca",
+  "text_cleaner": "phoneme_cleaners",
+
+  "mixed_precision": true
+}
