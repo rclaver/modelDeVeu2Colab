@@ -1,0 +1,22 @@
+1. Preparar el dataset catalán correctamente
+2. Montar un pipeline completo con Coqui
+3. Entrenar tu primer modelo paso a paso
+4. Integrarlo en tu app Android
+
+Estructura original de Common Voice
+cv-corpus-XX.X-YYYY-MM-DD/
+ ├── clips/
+ ├── train.tsv
+ ├── dev.tsv
+ ├── test.tsv
+clips/ → audios .mp3
+.tsv → metadatos (texto + path + speaker)
+
+Objetivo final (formato Coqui TTS)
+dataset/
+ ├── wavs/
+ │    ├── 000001.wav
+ │    ├── 000002.wav
+ └── metadata.csv
+         000001|Hola món
+         000002|Això és una prova
