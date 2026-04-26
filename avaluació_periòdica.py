@@ -2,7 +2,7 @@ import os
 from TTS.api import TTS
 
 run_path = "./proces/tts_output"
-latest_model = os.path.join(run_path, "best_model.pth")
+latest_model = os.path.join(run_path, "checkpoint_34000.pth")
 output_wav = os.path.join("test", "test.wav")
 text = "Aquesta és una prova automàtica de la veu entrenada."
 
